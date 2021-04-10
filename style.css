@@ -1,0 +1,171 @@
+
+
+body{
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+.mainpage{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+/* TOP PAGE */
+
+.top-page{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(images/pattern-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+
+}
+
+
+
+h1{
+
+    color: white;
+    font-weight: 500;
+    font-size: 1.8em;
+    margin-top: 20pxpx;
+
+}
+
+.input-ip{
+
+    display: flex;
+    margin-top: 5px;
+}
+
+#ip-tracker{
+
+    width: 420px;
+    height: 45px;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 15px;
+    font-size: 17px;
+    border: none;
+    color: hsl(0, 0%, 17%);
+    
+
+}
+
+button{
+
+    height: 2.956rem;
+    width: 50px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(80, 80, 80);
+    border: none;
+    padding: 0;
+    transform: translateX(-1rem) translateY(-0.03em);
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+
+button::after{
+
+    content: '';
+    position: absolute;
+    display: block;
+    background: url(images/icon-arrow.svg);
+    height: 10px;
+    width: 10px;
+    background-position: center;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+    transform: sc;
+
+}
+
+button:hover{
+
+    background-color: rgb(56, 56, 56);
+}
+
+
+/*  BANNER  */
+
+.banner{
+
+    display: flex;
+    align-items: center;
+    transform: translateY(-4.4rem);
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 130px;
+    box-shadow: 0px 10px 70px rgba(0, 0, 0, 0.384);
+    z-index: 99;
+ 
+}
+
+.results{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: gray;
+    width: 200px;
+    height: 130px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 20px;
+
+   
+}
+
+.results p{
+
+    top: 30px;
+    position: absolute;
+}
+
+#ipaddress::after, #location::after, #timezone::after{
+
+    content: '';
+    display: block;
+    height: 75px;
+    width: 1px;
+    background: rgba(122, 122, 122, 0.321);
+    position: absolute;
+    right: 0;
+    top: 45px;
+
+}
+
+.result-content{
+
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: 50px;
+
+}
+
+/*  MAP */
+
+#mapid{
+
+    transform: translateY(-8.2rem);
+    height: 700px;
+    width: 100%;
+    margin-bottom: -150px;
+}
