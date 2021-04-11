@@ -4,7 +4,7 @@
 
 let mapId = document.getElementById('mapid');
 
-let mymap = L.map('mapid').setView([51.505, -0.09], 13);
+let mymap = L.map('mapid').setView([43.6961, 7.275], 13);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -16,7 +16,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 // Default marker, same as the default set view in mymap (London)
 
-let marker = L.marker([51.505, -0.09]).addTo(mymap);
+let marker = L.marker([43.6961, 7.275]).addTo(mymap);
 
 
 // Input element 
@@ -64,7 +64,7 @@ function main(enteredIp){
 
   };
 
-// We display the result in our map API
+// We display the result in our map API (view + marker)
 
   function displayMap(res){
         mymap.setView([res.location.lat, res.location.lng], 13);
@@ -75,6 +75,13 @@ function main(enteredIp){
 
 searchBtn.addEventListener('click', e => {
     e.preventDefault();
-    main(enteredIp);
+
+    if(enteredIp.value == ''){
+        alert('Add an IP address');
+    }
+    else{
+        main(enteredIp);
+    }
+    
 });
 
